@@ -6,6 +6,7 @@
 #include <string.h>
 
 #include "flashutils/flashutils.h"
+#include "mtdutils/mtdutils.c"
 
 #ifndef BOARD_BML_BOOT
 #define BOARD_BML_BOOT              "/dev/block/bml7"

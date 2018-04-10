@@ -107,10 +107,12 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 LOCAL_MODULE := dump_image
 LOCAL_MODULE_TAGS := eng
-LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
+LOCAL_MODULE_CLASS := EXECUTABLES #RECOVERY_EXECUTABLES
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 LOCAL_SRC_FILES := dump_image.c
-LOCAL_SHARED_LIBRARIES := libmtdutils libflashutils libmmcutils libbmlutils libcutils libc
+#LOCAL_SHARED_LIBRARIES := libmtdutils libflashutils libmmcutils libbmlutils libcutils libc
+LOCAL_STATIC_LIBRARIES := libmtdutils libflashutils libmmcutils libbmlutils libcutils
+LOCAL_SHARED_LIBRARIES := libc
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
